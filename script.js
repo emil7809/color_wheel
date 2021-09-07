@@ -8,13 +8,13 @@ function start(){
 }
 
 function chosenColor() {
-    console.log("chosenColor");
+    //console.log("chosenColor");
   const HEXvalue = document.querySelector("#color_selector").value;
   //const RGBvalue = HEXtoRBG(HEXvalue);
   //const HSLvalue = RBGtoHSL(RGBvalue);
 
   displayColor(HEXvalue);
-  //displayColorData(HEXvalue, RGBvalue, HSLvalue);
+  displayColorData(HEXvalue);
 }
 
 function HEXvalues() {
@@ -30,10 +30,11 @@ function HSLvalues() {
 }
 
 function displayColor(color) {
-    console.log("displayColor");
+    //console.log("displayColor");
     document.querySelector("#color_wheel").style.backgroundColor = color;
 }
 
-function displayColorData() {
+function displayColorData(HEX) {
 
+    document.querySelector("#HEX_data span").textContent = HEX;
 }
